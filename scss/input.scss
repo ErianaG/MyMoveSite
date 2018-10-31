@@ -1,0 +1,282 @@
+@import "reset";
+@import "secondPage";
+
+$font-stack: 'RVMontserrat', sans-serif;
+$font-georgia: 'Georgia', serif;
+$font-tahoma: 'Tahoma', serif;
+$blue: #3949AB;
+$darkgray: #424242;
+$lightgray: #757575;
+
+// GENERAL STYLINGS //
+
+body {
+    font: 100% $font-stack;
+    h1 {
+        font-size: 54px;
+    }
+    li {
+        list-style: none;
+    }
+    h2 {
+        font-size: 42px;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+main {
+    max-width: 1170px;
+    margin: auto;
+}
+.hero__text--yellow {
+    color: #FDD835;
+    padding-bottom: 39px;
+}
+.hero__text--serif {
+    font: 100% $font-georgia;
+    font-size: 16px;
+    padding-top: 36px;
+}
+.text--bold {
+    font-weight: bold;
+}
+
+// HEADER NAV STYLING //
+
+.headerNav {
+    .headerNav__logo {
+        position: absolute;
+        left: 37px;
+        top: 28px;
+    }
+    .headerNav__links {
+        float: right;
+        display: flex;
+        flex-direction: row;
+        .hamburger {
+            padding-top: 21px;
+            padding-right: 47px;
+        }
+        li {
+            padding-top: 43px;
+            padding-right: 42px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 12px;
+            font-weight: lighter;
+        }
+    }
+}
+
+// HERO STYLES //
+
+.hero {
+    background-image: url("../img/hero_image.png");
+    height: 419px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+    .hero__text {
+        text-align: center;
+        color: white;
+        padding-top: 135px;
+    }
+}
+
+// MID PAGE NAV BAR //
+
+.midpageNav {
+    .midpageNav__links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 15px;
+        width: 1147px;
+        align-items: center;
+        li {
+            // padding-top: 42px;
+            font-size: 13px;
+            margin-right: 38px;
+            padding: 42px 3px 4px;
+            &.active {
+                color: #303F9F;
+                border-bottom: 2px solid #303F9F;
+            }
+        }
+    }
+    .midpageNav__button {
+        background-color: #536DFE;
+        color: white;
+        font-weight: bolder;
+        border: none;
+        margin: 0 0 0 101px;
+        width: 178px;   
+        height: 48px;
+    }
+}
+
+// ARTICLE CARDS //
+
+.articles {
+
+    // MAIN ARTICLE STYLES //
+
+    .articles__main {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 500px;
+        max-width: 1170px;
+        margin-bottom: 30px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 45px 0px;
+        .articles__main__img {
+            margin: 30px 0px 25px 30px;
+        }
+        .articles__main__text {
+            color: $darkgray;
+            height: 410px;
+            width: 608px;
+            align-self: flex-end;
+            margin: 60px 42px 30px 49px;
+            h2 {
+                margin: 15px 0px 25px 0px;
+                color: $darkgray;
+            }
+            .articles__main__smalltext {
+                font: 18px $font-georgia;
+                line-height: 30px;
+                margin-bottom: 43px;
+            }
+            .articles__main__footer {
+                display: flex;
+                align-content: center;
+                margin-top: 20px;
+                margin-bottom: 30px;
+                p {
+                    margin-left: 15px;
+                    margin-top: 3px;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+                span {
+                    color: $lightgray;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+// SMALL ARTICLE CARD STYLES //
+
+    .articles__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .articles__card {
+        width: 370px;
+        height: 549px;
+        margin-bottom: 30px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 45px 0px;;
+        .articles__img {
+            margin: 30px;
+        }
+        .articles__card__text{
+            height: 217px;
+            h3 {
+                color: $darkgray;
+                font-size: 26px;
+                margin: 16px 31px 10px;
+            }
+            img {
+                margin-left: 31px;
+            }
+            p {
+                font: 14px $font-georgia;
+                margin-left: 30px;
+                margin-right: 22px;
+            }
+        }
+        .articles__footer--small {
+            display: flex;
+            align-content: center;
+            margin-top: 10px;
+            margin-left: 31px;
+            p {
+                margin-left: 15px;
+                margin-top: 3px;
+                font-size: 12px;
+                font-weight: bold;
+            }
+            span {
+                color: $lightgray;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+// LOAD MORE BUTTON STYLING //
+
+.loadMore {
+    display: flex;
+    margin-top: 76px;
+    margin-bottom: 94px;
+    justify-content: space-between;
+    .loadMore__btn {
+        background-color: #536DFE;
+        color: white;
+        font-weight: bolder;
+        border: none;
+        width: 249px;   
+        height: 48px;
+    }
+}
+
+// FOOTER STYLING //
+
+.footerNav {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 14px;
+    background-color: $blue;
+    height: 367px;
+    width: 1440px;
+    bottom: 0;
+    .footerNav--words {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        width: 1077px;
+    }
+    .footerNav__links {
+        li {
+            margin-top: 10px;
+        }
+        a {
+            color: white;
+        }
+    }
+    .footerNav__terms {
+        display: flex;
+        justify-content: center;
+        li {
+            padding-right: 25px;
+            margin-bottom: 25px;
+        }
+    }
+    .footerNav__social {
+        display: flex;
+        align-items: center;
+        a {
+            margin-right:45px;
+        }
+    }
+}

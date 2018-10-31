@@ -1,0 +1,131 @@
+.hero {
+    background-image: url("/img/masthead.png");
+    height: 355px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    @media (max-width: $minWidthMedia) {
+        height: 460px;
+    }
+
+    &__information {
+        margin-left: 115px;
+        display: grid;
+        grid-template-columns: 206px 450px;
+
+        @media (max-width: $minWidthMedia) {
+            margin-left: auto;
+            max-width: 322px;
+        }
+
+        .hero__avatar {
+            margin-top: 115px;
+        
+            &__img {
+                height: 150px;
+                width: 150px;
+                position: relative;
+                z-index: 1;
+            }
+            &__border {
+                position: absolute;
+                background-color: white;
+                border-radius: 50%;
+                width: 206px;
+                height: 206px;
+                top: 87px;
+                left: 87px;
+                box-shadow: 0 2px 13px 0 rgba(0,0,0,0.50);
+                @media (max-width: $minWidthMedia) {
+                    top: 136px;
+                    left: 57px;
+                    max-width: 322px;
+                }
+            }
+            @media (max-width: $minWidthMedia) {
+                margin: 164px 86px 146px 85px;
+                max-width: 322px;
+            }
+        }
+        .hero__text {
+            font-family: 'Avenir', sans-serif;
+            color: white;
+            max-height: 127px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 151px;
+            @media (max-width: $minWidthMedia) {
+                display: block;
+                position: relative;
+                max-width: 100px;
+            }
+            
+            .profile__points {
+                background-color: white;
+                width: 98px;
+                height: 40px;
+                border-radius: 20px;
+                position: relative;
+                margin-left: 30px;
+                @media (max-width: $minWidthMedia) {
+                    position: absolute;
+                    top: -80px;
+                    left: -25px;
+                }
+
+                .points__text--red {
+                    position: absolute;
+                    color: #6E2A26;
+                    font-size: 21px;
+                    font-weight: bold;
+                    margin: 10px 40px 13px 16px;
+                }
+                .points__text--grey {
+                    position: absolute;
+                    color: #8E7270;
+                    font-size: 13px;
+                    font-weight: bold;
+                    margin: 15px 14px 15px 58px;
+                }
+            }
+            .profile__name {
+                font-size: 40px;
+                @media (max-width: $minWidthMedia) {
+                    position: absolute;
+                    top: -80px;
+                    left: -195px;
+                }
+            }
+            .profile__job {
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 1.41px;
+                
+                .profile__dot {
+                    margin: auto 15px;
+                    @media (max-width: $minWidthMedia) {
+                        margin: auto 8px;
+                    }
+                }
+                @media (max-width: $minWidthMedia) {
+                    position: absolute;
+                    bottom: -105px;
+                    left: -190px;
+                }
+            }
+            .profile__social-media {
+                display: flex;
+                li {
+                   margin-right: 18px; 
+                }
+                @media (max-width: $minWidthMedia) {
+                    position: absolute;
+                    bottom: -163px;
+                    left: -140px;
+                }
+            }
+        }
+    }
+}
